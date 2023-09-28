@@ -1,0 +1,422 @@
+/* Import Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #d4ac1c;
+}
+
+h1 {
+  background: #34495e;
+  text-align: center;
+  width: 100%;
+  padding: 18px 0;
+  color: #fff;
+}
+
+h1.heading {
+  font-size: 1.75rem;
+}
+
+
+.container {
+  display: flex;
+  gap: 35px;
+  padding: 30px;
+}
+
+.weather-input {
+  width: 320px;
+}
+
+.weather-input input {
+  height: 46px;
+  width: 100%;
+  outline: none;
+  font-size: 1.07rem;
+  padding: 0 17px;
+  margin: 10px 0 20px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.weather-input input:focus {
+  padding: 0 16px;
+  border: 2px solid #34495e;
+}
+
+.weather-input .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #34495e ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-input .separator::before{
+  content: "or";
+  color: #000000;
+  font-size: 1.18rem;
+  padding: 0 15px;
+  margin-top: -4px;
+  background: #E3F2FD;
+}
+
+.weather-input button {
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+  background: #34495e;
+  transition: 0.2s ease;
+}
+
+.weather-input .search-btn:hover {
+  background: #000000 ;
+}
+
+.weather-input .location-btn {
+  background: #34495e ;
+}
+
+.weather-input .location-btn:hover {
+  background: #000000 ;
+}
+
+.weather-data {
+  width: 57%;
+}
+
+.weather-data .current-weather {
+  color: #fff;
+  background: #34495e;
+  border-radius: 5px;
+  padding: 20px 70px 20px 20px;
+  display: flex;
+  width: 100%; 
+  justify-content: space-between;
+}
+
+.current-weather{
+  width: 680px;
+}
+.current-weather h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.weather-data h6 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.current-weather .icon {
+  text-align: center;
+}
+
+.current-weather .icon img {
+  max-width: 120px;
+  margin-top: -15px;
+}
+
+.current-weather .icon h6 {
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+
+.days-forecast h2 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.days-forecast .weather-cards {
+  display: flex;
+  gap: 20px;
+}
+.weather-cards .card:last-child {
+  margin-right: 0;
+}
+
+.weather-cards .card {
+  color: #fff;
+  padding: 18px 16px;
+  list-style: none;
+  /* width: calc(100% / 5); */
+  width: calc(20% - 20px);
+  margin-right: 20px;
+  background: #34495e ;
+  border-radius: 5px;
+}
+
+.weather-cards .card:hover {
+  cursor: pointer;
+  background-color: #000000;
+}
+
+.weather-cards .card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.weather-cards .card img {
+  max-width: 70px;
+  margin: 5px 0 -12px 0;
+}
+
+@media (max-width: 1400px) {
+  .weather-data .current-weather {
+    padding: 20px;
+  }
+
+  .weather-cards {
+    flex-wrap: wrap;
+    
+  }
+
+  .weather-cards .card {
+    /* width: calc(100% / 4 - 15px); */
+    width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: calc(100% / 3 - 20px);
+  }
+}
+
+@media (max-width: 950px) {
+  .weather-input {
+    width: 450px;
+  }
+
+  .weather-cards .card {
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.45rem;
+    padding: 16px 0;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .weather-input {
+    width: 100%;
+  }
+
+  .weather-data h2 {
+    font-size: 1.35rem;
+  }
+  
+  .weather-data .current-weather {
+    padding: 20px;
+  }
+
+  .weather-cards .card {
+    width: calc(100% - 20px);
+    margin-right: 0;
+  }
+}
+
+
+/* ************************************************* */
+
+/* Add this CSS at the end of your existing CSS */
+.banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  z-index: -1; /* To place it behind other content */
+}
+
+@media (max-width: 1200px) {
+  .banner {
+    display: none; /* Hide the banner on smaller screens */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    padding: 10px; /* Further reduce padding on smaller screens */
+  }
+
+  .social-links {
+    flex-direction: column; /* Stack social links vertically on smaller screens */
+    align-items: center;
+  }
+
+  .social-icon {
+    margin: 5px 0; /* Add spacing between social icons on smaller screens */
+  }
+}
+
+/* ------------------------------------------------------------------------ */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 43px;
+  margin-bottom: 0;
+  height: 180px;
+  width:100%;
+  background-color: #34495e;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icon {
+  color: rgb(0, 0, 0);
+  /* margin-right: 10px; */
+  margin: 5px;
+  font-size: 20px;
+}
+
+.newsletter {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.newsletter input[type="email"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  width: 100%; /* Make the input full width */
+  max-width: 300px; /* Set a maximum width if needed */
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.newsletter button {
+  padding: 8px 15px;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    padding: 1px; /* Further reduce padding on smaller screens */
+    width: 100%;
+  }
+}
+
+/* ----------------------------------------- */
+.weather-cards .card {
+  color: #fff;
+  padding: 18px 16px;
+  list-style: none;
+  width: 100%; /* Each card takes the full width of the container */
+  background: #34495e;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Add margin between each card */
+}
+
+.weather-cards .card:hover {
+  cursor: pointer;
+  background-color: #000000;
+}
+
+@media (max-width: 1400px) {
+  .weather-cards .card {
+    width: 100%; /* Each card takes the full width for screens up to 1400px */
+  }
+}
+
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: 100%; /* Each card takes the full width for screens up to 1200px */
+  }
+}
+
+@media (max-width: 950px) {
+  .weather-input {
+    width: 450px;
+  }
+
+  .weather-cards .card {
+    width: 100%; /* Each card takes the full width for screens up to 950px */
+  }
+}
+
+@media (max-width: 750px) {
+  /* .weather-cards  {
+    width: 200px;
+  } */
+}
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* Original Navbar Styles */
+
+/* Add your original navbar styles here */
+
+/* Media Query for screens smaller than 750px */
+@media (max-width: 750px) {
+  /* Adjust the navbar for smaller screens */
+  h1 {
+    font-size: 1.45rem;
+    padding: 16px 0;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .weather-input {
+    width: 100%;
+  }
+
+  .weather-data h2 {
+    font-size: 1.35rem;
+  }
+}
+
+/* Additional Media Queries for Other Screen Sizes */
+@media (max-width: 950px) {
+  /* Adjustments for screens up to 950px */
+}
+
+@media (max-width: 1200px) {
+  /* Adjustments for screens up to 1200px */
+}
+
+/* Add more media queries and adjustments as needed */
