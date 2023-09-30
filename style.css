@@ -97,6 +97,9 @@ h1.heading {
 
 .weather-data {
   width: 57%;
+  margin-left: 50px; 
+  align-items: center; 
+  
 }
 
 .weather-data .current-weather {
@@ -110,7 +113,9 @@ h1.heading {
 }
 
 .current-weather{
-  width: 680px;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .current-weather h2 {
   font-weight: 700;
